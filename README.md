@@ -38,7 +38,7 @@ Inclusion of the libraries.
 ### Variables
 
 ```c
-    char distancia_cm_str[30];
+    	char distancia_cm_str[30];
 	char distancia_inch_str[30];
 	uint32_t distancia_cm = 0;
 	uint32_t distancia_inch = 0;
