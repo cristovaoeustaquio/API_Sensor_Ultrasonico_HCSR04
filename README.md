@@ -8,13 +8,13 @@
 
 ---
 
-This project is a simple example demonstrate the behavior of the **Ultrasonic Sensor HCSR04** module of the **STM32 NUCLEO-F103RB** kit.
+This project is a simple [example](https://github.com/cristovaoeustaquio/API_Sensor_Ultrasonico_HCSR04/tree/main/example) demonstrate the behavior of the **Ultrasonic Sensor HCSR04** module of the **STM32 NUCLEO-F103RB** kit.
 
 ---
 
 ##	📖	The Application Note  
 
-All the behavior of the project is described (in Portuguese) in the document [AN_HCSR04_Application_Note.pdf](https://github.com/cristovaoeustaquio/API_Sensor_Ultrassonico_HCSR04/doc).
+All the behavior of the project is described (in Portuguese) in the document [AN_HCSR04_Application_Note.pdf](https://github.com/cristovaoeustaquio/API_Sensor_Ultrasonico_HCSR04/tree/main/doc).
 
 ---
 
@@ -38,11 +38,11 @@ Inclusion of the libraries.
 ### Variables
 
 ```c
-    char distancia_cm_str[30];
-	char distancia_inch_str[30];
-	uint32_t distancia_cm = 0;
-	uint32_t distancia_inch = 0;
-	uint32_t distancia_limite_cm = 10;
+char distancia_cm_str[30];
+char distancia_inch_str[30];
+uint32_t distancia_cm = 0;
+uint32_t distancia_inch = 0;
+uint32_t distancia_limite_cm = 10;
 ```
 - string used to print value in centimeters on oled
 - string used to print value in inches on oled
