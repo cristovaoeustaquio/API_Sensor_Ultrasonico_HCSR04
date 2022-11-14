@@ -14,7 +14,7 @@ This project is a simple example demonstrate the behavior of the **Ultrasonic Se
 
 ##	📖	The Application Note  
 
-All the behavior of the project is described (in Portuguese) in the document [AN_HCSR04_Application_Note.pdf](https://github.com/cristovaoeustaquio/API_Sensor_Ultrassonico_HCSR04/doc).
+All the behavior of the project is described (in Portuguese) in the document [AN_HCSR04_Application_Note.pdf](https://github.com/cristovaoeustaquio/API_Sensor_Ultrasonico_HCSR04/tree/main/doc).
 
 ---
 
