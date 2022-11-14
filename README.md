@@ -8,7 +8,7 @@
 
 ---
 
-This project is a simple example demonstrate the behavior of the **Ultrasonic Sensor HCSR04** module of the **STM32 NUCLEO-F103RB** kit.
+This project is a simple [example](https://github.com/cristovaoeustaquio/API_Sensor_Ultrasonico_HCSR04/tree/main/example) demonstrate the behavior of the **Ultrasonic Sensor HCSR04** module of the **STM32 NUCLEO-F103RB** kit.
 
 ---
 
