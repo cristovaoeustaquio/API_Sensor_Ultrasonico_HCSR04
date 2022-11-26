@@ -51,7 +51,9 @@ This API was implemented and tested in STM32 Nucleo-64 with STM32f103RB MCU. How
 
 ---
 ## How to use it:
+
 To use it, it is necessary to include "Ultrassonico.h" and "Ultrassonico.c" in your main file and define the Input/Output pins according to the labels provided in the table.
+
 ---
 ### Results
 An visual result of the use API can be seen in this [video](https://www.youtube.com/watch?v=1IYUT_5N1e0)
