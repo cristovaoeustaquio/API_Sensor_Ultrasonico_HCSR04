@@ -12,7 +12,7 @@ ___
 
 This API was developed as part of the Embedded Systems Programming course at UFMG - Prof. Ricardo de Oliveira Duarte – Department of Electronic Engineering.
 
-    This API contains functions to provide use of some hardware resources from HC-SR04 Ultrasonic Sensor available at: http://wiki.sunfounder.cc/index.php?title=Ultrasonic_Module
+This API contains functions to provide use of some hardware resources from HC-SR04 Ultrasonic Sensor available at: http://wiki.sunfounder.cc/index.php?title=Ultrasonic_Module
 
 ---
 # Sensor specifications
