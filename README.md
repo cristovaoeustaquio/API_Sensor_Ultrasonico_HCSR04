@@ -1,4 +1,6 @@
-#	Ultrasonic Sensor HCSR04-AN
+# stm32f1libs
+___
+# HC-SR04 Ultrasonic Sensor API
 
 <div align="left">
     <img src="https://img.shields.io/badge/language-c-blue">
@@ -8,71 +10,48 @@
 
 ---
 
-This project is a simple [example](https://github.com/cristovaoeustaquio/API_Sensor_Ultrasonico_HCSR04/tree/main/example) demonstrate the behavior of the **Ultrasonic Sensor HCSR04** module of the **STM32 NUCLEO-F103RB** kit.
+    This API was developed as part of the Embedded Systems Programming course at UFMG - Prof. Ricardo de Oliveira Duarte – Department of Electronic Engineering.
+
+    This API contains functions to provide use of some hardware resources from HC-SR04 Ultrasonic Sensor available at: http://wiki.sunfounder.cc/index.php?title=Ultrasonic_Module
 
 ---
-
-##	📖	The Application Note  
-
-All the behavior of the project is described (in Portuguese) in the document [AN_HCSR04_Application_Note.pdf](https://github.com/cristovaoeustaquio/API_Sensor_Ultrasonico_HCSR04/tree/main/doc).
+# Sensor specifications
+- Sensor to mesure distance in a range 2 - 400 cm
+- Ease of use
+- Resolution: 0.3 cm
+- Trigger Input Pulse width: 10 us
+- Dimension: 45mm x 20mm x 15mm
+- Power Supply: 5V DC
 
 ---
+# Hardware requirements:
+ - HC-SR04 ultrasonic sensor datasheet: https://pdf1.alldatasheet.com/datasheet-pdf/view/1132203/ETC2/HC-SR04.html
 
-##	📩	Example
-In these example we used [SSD1306-API ](https://github.com/SL-RU/stm32libs/tree/master/stm32f10x/ssd1306) to show distance mesurements from HCSR04 sensor. To test all functions that runs on MCU we use a internal push button of kit.
+## Default pinout:
+![HCSR04](HCSR05.jpg)
+| PIN | STM32F103RB LABELS | Description |
+|---|---|---|
+| VCC | 5V | Powers the sensor |
+| Trig | GPIO_Output | Trigger Input Pin: if set to HIGH for 10 us HC-SR04 will send out eight cycle sonic burst at 40 kHz |
+| Echo | GPIO_Input | Echo Output Pin: goes to HIGH automatically once the burst is sent and will remain HIGH until the burst hits the sensor again |
+| GND | GND | Common GND |
 
-### Includes
+    This API was implemented and tested in STM32 Nucleo-64 with STM32f103RB MCU. However, it is possible to use it with any other board that has 1 GPIO-Input and 1 GPIO-Output available, as listed in the table above. In this case, it is necessary to change the included files from the HAL library to the proper one,according to your MCU.
+ 
+ - STM NUCLEO-F103RB MAnufacturer website: https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html
 
-```c
-#include <stdio.h>
-#include <string.h>
-#include "Ultrassonico.h"
-#include "ssd1306.h"
-#include "fonts.h"
-#include "bitmap.h"
-#include "test.h"
-```
+---
+## Software requirements:
+- STM32CubeIDE 1.6.1: Available at https://www.st.com/en/development-tools/stm32cubeide.html
 
-Inclusion of the libraries.
+---
+## API main files:
+- Ultrassonico.c
+- Ultrassonico.h
 
-### Variables
-
-```c
-char distancia_cm_str[30];
-char distancia_inch_str[30];
-uint32_t distancia_cm = 0;
-uint32_t distancia_inch = 0;
-uint32_t distancia_limite_cm = 10;
-```
-- string used to print value in centimeters on oled
-- string used to print value in inches on oled
-- Variable that receives mesured value from sensor converted to centimeters
-- Variable that receives mesured value from sensor converted to inches
-- Variable that defines limit distance to trigger alert
-
-### API Functions
-
-```c
-uint32_t Medir_Distancia_CM(void); 
-```
-- Returns the distance from object in centimeters
-```c
-uint32_t Medir_Distancia_INCH(void); 
-```
-- Returns the distance from object in inches
-```c
-void Aproximacao(void); 
-```
-- It will blinks a GPIO, incresing the frequecy when the distance from object is decreasing 
-```c
-void Alerta_Distancia(uint32_t dist); 
-```
-- It will generate an interruption when the 'dist' value is reached
-```c
-void delay_us(uint16_t us);
-```
-- Use to get time in microsenconds
-
+---
+## How to use it:
+    To use it, it is necessary to include "Ultrassonico.h" and "Ultrassonico.c" in your main file and define the Input/Output pins according to the labels provided in the table.
+---
 ### Results
-
-An visual result of this example can be seen in this [video](https://youtu.be/CNuhxgeYytc)
+An visual result of the use API can be seen in this [video](https://www.youtube.com/watch?v=1IYUT_5N1e0)
