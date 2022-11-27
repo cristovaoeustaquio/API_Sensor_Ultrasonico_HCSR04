@@ -36,7 +36,7 @@ This API contains functions to provide use of some hardware resources from HC-SR
 | Echo | GPIO_Input | Echo Output Pin: goes to HIGH automatically once the burst is sent and will remain HIGH until the burst hits the sensor again |
 | GND | GND | Common GND |
 
-This API was implemented and tested in STM32 Nucleo-64 with STM32f103RB MCU. However, it is possible to use it with any other board that has 1 GPIO-Input and 1 GPIO-Output available, as listed in the table above. In this case, it is necessary to change the included files from the HAL library to the proper one,according to your MCU.
+This API was implemented and tested in STM32 Nucleo-F103RB MCU. However, it is possible to use it with any other board that has 1 GPIO-Input and 1 GPIO-Output available, as listed in the table above. In this case, it is necessary to change the included files from the HAL library to the proper one,according to your MCU.
  
  - STM NUCLEO-F103RB MAnufacturer website: https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html
 
