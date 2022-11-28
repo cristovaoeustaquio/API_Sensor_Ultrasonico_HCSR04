@@ -21,7 +21,7 @@ This API contains functions to provide use of some hardware resources from HC-SR
 - Resolution: 0.3 cm
 - Trigger Input Pulse width: 10 us
 - Dimension: 45mm x 20mm x 15mm
-- Power Supply: 5V DC
+- Power Supply: 3~5V DC
 
 ---
 # Hardware requirements:
@@ -31,7 +31,7 @@ This API contains functions to provide use of some hardware resources from HC-SR
 ![HCSR04](HCSR04.jpg)
 | PIN | STM32F103RB LABELS | Description |
 |---|---|---|
-| VCC | 5V | Powers the sensor |
+| VCC | 3~5V | Powers the sensor |
 | Trig | GPIO_Output | Trigger Input Pin: if set to HIGH for 10 us HC-SR04 will send out eight cycle sonic burst at 40 kHz |
 | Echo | GPIO_Input | Echo Output Pin: goes to HIGH automatically once the burst is sent and will remain HIGH until the burst hits the sensor again |
 | GND | GND | Common GND |
